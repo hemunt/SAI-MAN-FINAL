@@ -9,7 +9,7 @@ public class PlaterController : MonoBehaviour
     public float movespeed = 30f;
     float horizontalMove = 0f;
     bool jump = false;
-   // public Animator anim;
+    public Animator anim;
     private Transform tr;
 
 
@@ -27,19 +27,19 @@ public class PlaterController : MonoBehaviour
         }
         if (horizontalMove == 0)
         {
-            //anim.SetBool("Running", false);
+            anim.SetBool("Running", false);
 
         }
         else if (horizontalMove > 0)
         {
             
-           // anim.SetBool("Running", true);
+           anim.SetBool("Running", true);
          
         }
         else if (horizontalMove < 0)
         {
           
-            //anim.SetBool("Running", true);
+            anim.SetBool("Running", true);
         }
         
     }
