@@ -23,7 +23,7 @@ public class PlaterController : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * movespeed;
         if (Input.GetButtonDown("Jump")) {
             jump = true;
-            //anim.SetTrigger("Takeoff");
+            anim.SetTrigger("Jump");
         }
         if (horizontalMove == 0)
         {
