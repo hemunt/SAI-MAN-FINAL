@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spicks
+  - LeftArme
+  - RightArme
   layers:
   - Default
   - TransparentFX
