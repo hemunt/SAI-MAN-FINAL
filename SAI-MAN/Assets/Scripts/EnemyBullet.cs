@@ -9,12 +9,13 @@ public class EnemyBullet : MonoBehaviour
     public float speed;
     private Transform Player;
     private Vector2 Target;
-
+    private GamePlayeController instance;
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         Target = new Vector2(Player.position.x, Player.position.y);
+        instance = GameObject.FindGameObjectWithTag("GPC").GetComponent<GamePlayeController>(); 
     }
 
     // Update is called once per frame
@@ -30,5 +31,13 @@ public class EnemyBullet : MonoBehaviour
     void DestroyProjectile()
     {
         Destroy(gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Hit");
+        if (collision == GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider2D>())
+        {
+            instance.TakeDamage(50);
+        }
     }
 }

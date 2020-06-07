@@ -18,4 +18,11 @@ public class EnemyAim : MonoBehaviour
     {
         transform.position = Player.position;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision == GameObject.FindGameObjectWithTag("Player"))
+        {
+
+        }
+    }
 }

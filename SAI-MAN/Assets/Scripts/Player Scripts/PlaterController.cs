@@ -16,6 +16,7 @@ public class PlaterController : MonoBehaviour
     public GameObject Bullet;
     public Transform GunPointLeft;
     public Transform GunPointRight;
+    public int maxHealth = 100;
     //public GameObject AimIcone;
   
 

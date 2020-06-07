@@ -7,6 +7,7 @@ TagManager:
   - Spicks
   - LeftArme
   - RightArme
+  - GPC
   layers:
   - Default
   - TransparentFX
