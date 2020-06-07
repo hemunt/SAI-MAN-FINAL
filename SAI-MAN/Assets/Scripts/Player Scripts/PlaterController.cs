@@ -16,18 +16,19 @@ public class PlaterController : MonoBehaviour
     public GameObject Bullet;
     public Transform GunPointLeft;
     public Transform GunPointRight;
-    public GameObject AimIcone;
+    //public GameObject AimIcone;
   
 
     private float timeBtwShots;
     public float StartTimeBtwShots;
-
+   
    
     private void Start()
     {
         
-        AimIcone.SetActive(false);
+       
         tr = GetComponent<Transform>();
+
     }
     // Update is called once per frame
     void Update()
@@ -60,8 +61,7 @@ public class PlaterController : MonoBehaviour
             Vector2 DownPossition = ShootDown.transform.position;
             Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             anim.SetBool("Aiming", true);
-            AimIcone.SetActive(true);
-            AimIcone.transform.position = difference;
+            
             
             if (difference.y > UpPossition.y)
             {
@@ -105,7 +105,6 @@ public class PlaterController : MonoBehaviour
         }
         else
         {
-            AimIcone.SetActive(false);
             
             anim.SetBool("Aiming", false);
         }
